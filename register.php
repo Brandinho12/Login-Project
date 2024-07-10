@@ -1,4 +1,8 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 include 'config.php'; // Assuming this includes your database connection details and initializes $conn
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -8,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $Password = Password_hash($_POST['password'], PASSWORD_BCRYPT); // Hashing the password
 
     // Insert data into the users table
-    $sql = "INSERT INTO user (first_name, last_name, email, Password) VALUES (?, ?, ?, ?)";
+    $sql = "INSERT INTO users (first_name, last_name, email, Password) VALUES (?, ?, ?, ?)";
     $stmt = $conn->prepare($sql);
 
     // Bind parameters
