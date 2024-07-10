@@ -3,10 +3,10 @@ include 'config.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
-    $password = $_POST['password'];
+    $Password = $_POST['password'];
 
     // Retrieve user from the users table
-    $sql = "SELECT id, first_name, last_name, password FROM users WHERE email = ?";
+    $sql = "SELECT id, first_name, last_name, Password FROM user WHERE email = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("s", $email);
     $stmt->execute();

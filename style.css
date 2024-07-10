@@ -63,24 +63,24 @@
   }
   
   input::placeholder {
-    color: transparent;
+    color: grey;
   }
   
-  label {
+ /* label {
     color: #757575;
     position: relative;
     left: 1.5em;
     top: 1.3em;
     cursor: auto;
     transition: 0.3s ease all;
-  }
-  
+  }*/
+  /*
   input:focus + label,
   input:placeholder-shown ~ label {
     top: -1.4em;
     color: hsl(327, 90%, 28%);
     font-size: 15px;
-  }
+  }*/
   
   .recover {
     text-align: right;
